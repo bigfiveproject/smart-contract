@@ -732,20 +732,23 @@ contract CoinToken is Context, IERC20, Ownable {
     }
     
     function calculateTaxFee(uint256 _amount) private view returns (uint256) {
+        //Return 10**2
         return _amount.mul(_taxFee).div(
-            10**2
+            0
         );
     }
 
     function calculateDevFee(uint256 _amount) private view returns (uint256) {
+	 //Return 10**2
         return _amount.mul(_devFee).div(
-            10**2
+            0
         );
     }
 
     function calculateLiquidityFee(uint256 _amount) private view returns (uint256) {
+	    //Return 10**2
         return _amount.mul(_liquidityFee).div(
-            10**2
+            0
         );
     }
     
